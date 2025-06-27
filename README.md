@@ -30,16 +30,19 @@ Minimal example:
 
 ```dart
 
-DynamicBottomSheet.show(
-  context: context,
-  builder: (context) => YourCustomContent(),
-  snapPoints: [0.3, 0.6, 1.0],
-  initialSnap: 0.6,
-  expand: true,
-  barrierColor: Colors.black.withOpacity(0.5),
-  backgroundColor: Colors.white,
-  isDismissible: true,
+ @override
+Widget build(BuildContext context) {
+return DynamicBottomSheet.show(
+context: context,
+builder: (context) => YourCustomContent(),
+snapPoints: [0.3, 0.6, 1.0],
+initialSnap: 0.6,
+expand: true,
+barrierColor: Colors.black.withOpacity(0.5),
+backgroundColor: Colors.white,
+isDismissible: true,
 );
+   }
 
 ```
 
