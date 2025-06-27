@@ -30,18 +30,23 @@ Minimal example:
 
 ```dart
 
-@override
+ @override
 Widget build(BuildContext context) {
-  return DynamicBottomSheet.show(
-    context: context,
-    builder: (context) => YourCustomContent(),
-    snapPoints: [0.3, 0.6, 1.0],
-    initialSnap: 0.6,
-    expand: true,
-    barrierColor: Colors.black.withOpacity(0.5),
-    backgroundColor: Colors.white,
-    isDismissible: true,
-  );
-}
+return DynamicBottomSheet.show(
+context: context,
+builder: (context) => YourCustomContent(),
+snapPoints: [0.3, 0.6, 1.0],
+initialSnap: 0.6,
+expand: true,
+barrierColor: Colors.black.withOpacity(0.5),
+backgroundColor: Colors.white,
+isDismissible: true,
+);
+   }
 
 ```
+
+
+TODO: Tell users more about the package: where to find more information, how to
+contribute to the package, how to file issues, what response they can expect
+from the package authors, and more.
