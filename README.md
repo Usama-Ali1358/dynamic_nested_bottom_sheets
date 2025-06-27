@@ -1,39 +1,47 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# dynamic_nested_bottom_sheets
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A highly customizable, easy-to-use Flutter package for building dynamic, nested modal bottom sheets with support for snapping, stackable sheets, custom backgrounds, adjustable barrier color and dismiss behavior, and much more!.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+![demo](https://github.com/user-attachments/assets/367c1e21-ee58-4604-8040-a79a86643866)
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+📚 Stack/Nesting Support: Open multiple sheets on top of each other and manage them with a powerful controller.
+
+🛠️ Custom Snap Points: Define multiple snap positions for each sheet.
+
+🎨 Fully Customizable: Adjust sheet background color, border radius, drag handle, and barrier color/opacity.
+
+🧩 isDismissible: Control whether sheets can be dismissed by tapping outside.
+
+🎛️ Callbacks: Easily hook into onOpened, onClosed, and onSnap events.
+
+💪 Draggable & Expandable: Supports DraggableScrollableSheet out of the box for rich interactions.
+
+🚀 Easy Integration: Plug-and-play with your existing Flutter project.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this package, add dynamic_nested_bottom_sheets as a dependency in your pubspec.yaml file.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Minimal example:
 
 ```dart
-const like = 'sample';
+
+@override
+Widget build(BuildContext context) {
+  return DynamicBottomSheet.show(
+    context: context,
+    builder: (context) => YourCustomContent(),
+    snapPoints: [0.3, 0.6, 1.0],
+    initialSnap: 0.6,
+    expand: true,
+    barrierColor: Colors.black.withOpacity(0.5),
+    backgroundColor: Colors.white,
+    isDismissible: true,
+  );
+}
+
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
